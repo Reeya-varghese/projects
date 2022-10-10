@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/navigation bar.css')}}">
+
+    <style>
+        body{
+            background-image: url("/static/index.jpg");
+            height: 100%;
+           
+         background-repeat: no-repeat;
+         background-size: cover;
+        }
+        .login{
+            padding-left:  2%; 
+           padding-right: 2%;
+        }
+        h1,h2,label{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:darkslateblue;
+            font-weight: bolder;
+        }
+        div{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: darkslateblue;
+        }
+        button{
+            cursor: pointer;
+            background-color: cornflowerblue;
+            color: aliceblue;
+            font-weight: bolder;
+            
+        }
+        input[type=number], select{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            font-weight: bold;
+            background-color: aliceblue;
+        }
+        .footer{
+            text-align: center;
+        }
+        </style>
+</head>
+    
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+       <a href="#help" class="split">Help</a>
+    </div>
+    
+   <!---- <div style="padding-left:16px">
+      <h2>Top Navigation Example</h2>
+      <p>Some content..</p>
+    </div>-->
+    <div class="header">
+        <h1><center>Customer Segmentation</center></h1>
+    </div>
+<body text ="black">
+
+<div class ="login">
+    
+    <form action ="{{ url_for('predict')}}" method="post">
+
+        <h2>Please Enter The Following Details</h1>
+           </h2>
+    </style></head>
+
+    <label for ="Sex">Sex:</label>
+    <select id="Sex" name="Sex">
+        <option value=0>Female</option>
+        <option value=1>Male</option>
+    </select> &nbsp;&nbsp;<br>
+
+    <br><label for ="Marital status">Marital status:</label>
+    <select id="Marital status" name="Marital status">
+        <option value=0>Single</option>
+        <option value=1>Married</option>
+    </select> &nbsp;&nbsp;<br>
+
+    <br> <label>Age:</label>
+    <input type="number" min="20" max="80" name="Age" placeholder="Age " required ="required" /><br>
+    <br>
+
+    <label>Education:</label>
+    <input type="number" min="0" max="3" name="Education" placeholder="Education " required ="required" /><br>
+    <br>
+
+    <label>Income:</label>
+    <input type="number" min="5000" name="Income" placeholder="Income " required ="required" /><br>
+
+    <br><label for ="Occupation">Occupation:</label>
+    <select id="Occupation" name="Occupation">
+        <option value=0>Not working</option>
+        <option value=1>Working</option>
+        <option value=2>Business</option>
+    </select> &nbsp;&nbsp;<br>
+
+    <br>
+
+    <br><label for ="Settlement size">Settlement size:</label>
+    <select id="Settlement size" name="Settlement size">
+        <option value=1>1</option>
+        <option value=0>0</option>
+        <option value=2>2</option>
+    </select> &nbsp;&nbsp;<br>
+
+    <br><br>
+    <button type ="submit" class ="btn btn-primary btn-block btn-large" style ="height: 30px;width: 200px;">Predict</button>
+    </form>
+    <br>
+
+    <br>
+    {{prediction_text}}
+    <!---<br>
+    <br>
+    <img src="/static/confused.jpg" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="/static/cust.jpg" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="/static/happy-customer.jpg" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <br>
+    <br>
+    <img src="/static/nocust.jpg" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>--->
+</div> 
+<br><br><br>
+    <div class="footer">
+    <footer >
+        <p style="font-size:'5%';">Company:<br>
+        <a href="mailto:hege@example.com">MachineLearning@example.com</a>
+    </p>
+    <p>&copy; Copyright all rights reserved</p>
+    </footer> </div>   
+</body>
+</html>

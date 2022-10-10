@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/navigation bar.css')}}">
+    <style>
+        h1{
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             color:darkslateblue;
+             text-align: center;
+             padding-top: 10%;
+        }
+         body{
+            background-color: rgb(220, 212, 247);
+       
+         }
+        button{
+             cursor: pointer;
+       
+             background-color: black;
+             color:white;
+             font-weight: bolder;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .center {
+             margin: 0;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: black;
+            font-size:x-large ;
+            text-align: center; 
+        }
+    </style>
+</head>
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+     <a href="#help" class="split">Help</a>
+  </div>
+<body>
+    <h1>The Customer data has been successfully deleted from the database</h1><br>
+    <!--<p>The customer must accept the terms and conditions sent to them in the email and join the inviation within 12 days of receiving the email.
+      <br>Failing to adhere to any of the <a href="#t&c">Terms and Conditions</a> might lead to the revocation of the membership.</p>-->
+       
+   
+   <div class="center"> <a href="{{url_for('npc')}}"><button class ="btn btn-primary btn-block btn-large" style ="height: 50px;width: 200px;">Go back</button></a></div>
+   <br><br><br>
+   <div class="footer">
+   <footer >
+       <p style="font-size:'5%';">Company:<br>
+       <a href="mailto:hege@example.com">MachineLearning@example.com</a>
+   </p>
+   <p>&copy; Copyright all rights reserved</p>
+   </footer> </div>
+</body>
+</html
